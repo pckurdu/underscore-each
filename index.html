@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>pckurdu</title>
+    <script src="underscore-min.js"></script>
+    <script>
+
+    (function(){
+
+/*
+      var array=["pckurdu1","pckurdu2"];
+
+      var array2=Array(3);
+
+      array2[0]="pckurdu3";
+      array2[1]="pckurdu4";
+      array2[2]="pckurdu5";
+
+      var pckurdu={name:"pc",surname:"kurdu",age:20}
+
+      _.each(pckurdu,function(name,key){
+        console.log(key);
+      })
+      */
+
+      var array=Array(3);
+      array[0]="pckurdu1";
+      array[1]="pckurdu2";
+      array[2]="pckurdu3";
+
+      _.each(array,function(element,index,list){
+
+        var output='Element: '+element+' , Index: '+index+' , List length: '+list.length;
+        console.log(output);
+
+      })
+
+
+
+    }())
+
+
+
+
+    function display(){
+
+      var n=array.length;
+
+      var div=document.getElementById("div");
+
+      for (var i = 0; i < n; i++) {
+
+        var newDiv=document.createElement("div");
+
+        newDiv.innerHTML="item "+(i+1).toString()+" of "+n.toString()+" is "+array[i];
+
+        div.appendChild(newDiv);
+
+      }
+
+    }
+
+    </script>
+
+  </head>
+  <body>
+
+    <input type="button" id="btn" value="Display Array" onclick="display()"/>
+    <hr>
+    <div id="div"></div>
+
+  </body>
+</html>
